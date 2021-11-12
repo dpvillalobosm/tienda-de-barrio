@@ -1,6 +1,7 @@
 # Informática I: Tienda de Barrio
 Integrantes
 Diana Paola Villalobos Muñoz - 20212099027
+Andres Gerardo Bermudez Muñoz - 20211099003
 
 Repositorio para los artefactos de software de la tienda de barrio
 
