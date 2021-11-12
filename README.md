@@ -1,4 +1,6 @@
 # Informática I: Tienda de Barrio
+Integrantes
+Diana Paola Villalobos Muñoz
 Repositorio para los artefactos de software de la tienda de barrio
 
 ## Historias de Usuario
