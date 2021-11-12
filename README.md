@@ -1,8 +1,20 @@
 # Informática I: Tienda de Barrio
 Integrantes
-Diana Paola Villalobos Muñoz
+Diana Paola Villalobos Muñoz - 20212099027
 
 Repositorio para los artefactos de software de la tienda de barrio
+
+
+Contexto
+
+
+
+Roles
+
+-Cliente
+-Administrador
+-Tendero
+-Domiciliario
 
 ## Historias de Usuario
 
