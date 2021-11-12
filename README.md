@@ -12,9 +12,13 @@ Contexto
 Roles
 
 -Cliente
+
 -Administrador
+
 -Tendero
+
 -Domiciliario
+
 
 ## Historias de Usuario
 
