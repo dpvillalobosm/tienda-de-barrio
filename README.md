@@ -1,20 +1,19 @@
 # Informática I: Tienda de Barrio
-**Integrantes**
-
-Diana Paola Villalobos Muñoz - 20212099027
-
-Andres Gerardo Bermudez Muñoz - 20211099003
-
-Helberth Alberto Calderon Duran - 20212099018
 
 Repositorio para los artefactos de software de la tienda de barrio
 
+**Integrantes:**
 
-**Contexto**
+- Diana Paola Villalobos Muñoz - 20212099027
+- Andres Gerardo Bermudez Muñoz - 20211099003
+- Helberth Alberto Calderon Duran - 20212099018
+- Camilo Andrés Díaz Serrano - 20212099019
+
+**Contexto:**
 
 
 
-**Roles**
+**Roles:**
 
 - Cliente
 
