@@ -1,5 +1,27 @@
 # Informática I: Tienda de Barrio
+
 Repositorio para los artefactos de software de la tienda de barrio
+
+**Integrantes:**
+
+- Diana Paola Villalobos Muñoz - 20212099027
+- Andres Gerardo Bermudez Muñoz - 20211099003
+- Helberth Alberto Calderon Duran - 20212099018
+- Camilo Andrés Díaz Serrano - 20212099019
+
+**Contexto:**
+Diagramas de comportamiento y roles para el caso de uso de la tienda de barrio, que permite identificar las necesidades propias del negocio a partir del uso de herramientas tecnologicas.
+
+**Roles:**
+
+- Cliente
+
+- Administrador
+
+- Tendero
+
+- Domiciliario
+
 
 ## Historias de Usuario
 
