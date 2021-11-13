@@ -10,8 +10,7 @@ Repositorio para los artefactos de software de la tienda de barrio
 - Camilo Andrés Díaz Serrano - 20212099019
 
 **Contexto:**
-
-
+Diagramas de comportamiento y roles para el caso de uso de la tienda de barrio, que permite identificar las necesidades propias del negocio a partir del uso de herramientas tecnologicas.
 
 **Roles:**
 
