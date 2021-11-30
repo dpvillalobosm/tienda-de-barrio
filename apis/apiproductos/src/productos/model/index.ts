@@ -3,10 +3,11 @@ import dbconnection from '../../config/database.config';
 
 interface ProductosAttributes {
     id: string,
-    // user_id: string,
-    name: string,
-    celnum: string,
-    direccion: string,
+    titulo: string,
+    descripcion: string,
+    costoUnitario: number,
+    unidad: number,
+    tipoUnidad: string
 }
 
 
@@ -19,22 +20,23 @@ ProductoInstance.init(
             primaryKey: true,
             allowNull: false,
         },
-        // user_id: {
-        //     type: DataTypes.UUIDV4,
-        //     references: {
-        //         model: 'usuarios',
-        //         key: 'id',
-        //     }
-        // },
-        name: {
+        titulo: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        celnum: {
+        descripcion: {
             type: DataTypes.STRING,
+            allowNull: true,
+        },
+        costoUnitario: {
+            type: DataTypes.DECIMAL,
             allowNull: false,
         },
-        direccion: {
+        unidad : {
+            type: DataTypes.DECIMAL,
+            allowNull: false,
+        },
+        tipoUnidad: {
             type: DataTypes.STRING,
             allowNull: false,
         }
