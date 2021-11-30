@@ -7,19 +7,18 @@ class ProductoValidator {
         .optional()
         .isUUID(4)
         .withMessage("The value should be UUID v4"),
-      // body("user_id")
-      //   .optional()
-      //   .isUUID(4)
-      //   .withMessage("The value should be UUID v4"),
-      body("name")
+      body("titulo")
         .notEmpty()
-        .withMessage("El valor de nombre no puede estar vacio"),
-      body("celnum")
+        .withMessage("El título del producto no puede estar vacío"),
+      body("costoUnitario")
         .notEmpty()
-        .withMessage("El valor de numero celular no puede estar vacio"),
-      body("direccion")
+        .withMessage("El costo unitario no puede estar vacío"),
+      body("unidad")
         .notEmpty()
-        .withMessage("El valor de direccion no puede estar vacio"),    
+        .withMessage("La unidad no puede estar vacía"),
+      body("tipoUnidad")
+        .notEmpty()
+        .withMessage("El Tipo de Unidad no puede estar vacío"),  
     ];
   }
   checkReadProducto() {

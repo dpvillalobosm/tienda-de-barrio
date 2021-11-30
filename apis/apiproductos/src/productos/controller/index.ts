@@ -2,9 +2,6 @@ import {Request, Response } from "express";
 import { v4 as uuidv4 } from "uuid";
 import { ProductoInstance } from "../model/index";
 
-
-
-
 class ProductosController {
 
     async create(req:Request, res:Response) {
