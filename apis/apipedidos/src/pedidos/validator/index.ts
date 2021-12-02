@@ -6,20 +6,15 @@ class PedidoValidator {
       body("id")
         .optional()
         .isUUID(4)
-        .withMessage("The value should be UUID v4"),
-      // body("user_id")
-      //   .optional()
-      //   .isUUID(4)
-      //   .withMessage("The value should be UUID v4"),
-      body("name")
+        .withMessage("El valor debe ser un UUID v4"),
+      body("idCliente")
         .notEmpty()
-        .withMessage("El valor de nombre no puede estar vacio"),
-      body("celnum")
+        .isUUID(4)
+        .withMessage("El id del cliente es obligatorio y debe ser un UUID v4"),
+      body("idProducto")
         .notEmpty()
-        .withMessage("El valor de numero celular no puede estar vacio"),
-      body("direccion")
-        .notEmpty()
-        .withMessage("El valor de direccion no puede estar vacio"),    
+        .isUUID(4)
+        .withMessage("El id del producto es obligatorio y debe ser un UUID v4")  
     ];
   }
   checkReadPedido() {
@@ -40,9 +35,9 @@ class PedidoValidator {
     return [
       param("id")
         .notEmpty()
-        .withMessage("The value should not be empty")
+        .withMessage("El id no debe estar vacío")
         .isUUID(4)
-        .withMessage("The value should be UUID v4"),
+        .withMessage("El id debe ser un UUID v4"),
     ];
   }
 }
