@@ -13,7 +13,7 @@ class PedidosController {
             const record = await PedidoInstance.create({ ...req.body, id });
             return res.json({ record, msg: "Pedido agregado exitosamente" });
         } catch (e) {
-            return res.json({ msg: "error al crear", status: 500, route: "/create" });
+            return res.json({ msg: "Error al crear el pedido", status: 500, route: "/create" });
         }
     }
 
@@ -24,7 +24,7 @@ class PedidosController {
             const records = await PedidoInstance.findAll({ where: {}, limit, offset });
             return res.json(records);
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/read" });
+            return res.json({ msg: "Error al consultar los pedidos", status: 500, route: "/read" });
         }
     }
 
@@ -34,7 +34,7 @@ class PedidosController {
             const record = await PedidoInstance.findOne({ where: { id } });
             return res.json(record);
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/read:id" });
+            return res.json({ msg: "Error al consultar el pedido", status: 500, route: "/read:id" });
         }
     }
 
@@ -44,7 +44,7 @@ class PedidosController {
             const record = await PedidoInstance.findOne({ where: { id } });
     
             if (!record) {
-            return res.json({ msg: "Can not find existing record" });
+            return res.json({ msg: "No se puede encontrar el pedido a actualizar" });
             }
     
             const updatedRecord = await record.update({
@@ -52,7 +52,7 @@ class PedidosController {
             });
             return res.json({ record: updatedRecord });
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/update/:id" });
+            return res.json({ msg: "Error al actualizar el pedido", status: 500, route: "/update/:id" });
         } 
     }
 
@@ -62,13 +62,13 @@ class PedidosController {
             const record = await PedidoInstance.findOne({ where: { id } });
     
             if (!record) {
-            return res.json({ msg: "Can not find existing record" });
+            return res.json({ msg: "No se encuentra el pedido a eliminar" });
             }
     
             const deletedRecord = await record.destroy();
             return res.json({ record: deletedRecord });
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/delete/:id" });
+            return res.json({ msg: "Error al eliminar el pedido", status: 500, route: "/delete/:id" });
         }
     }
 }

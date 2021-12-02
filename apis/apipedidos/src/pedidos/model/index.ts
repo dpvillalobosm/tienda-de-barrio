@@ -3,10 +3,8 @@ import dbconnection from '../../config/database.config';
 
 interface PedidoAttributes {
     id: string,
-    // user_id: string,
-    name: string,
-    celnum: string,
-    direccion: string,
+    idCliente: string,
+    idProducto: string
 }
 
 
@@ -19,25 +17,14 @@ PedidoInstance.init(
             primaryKey: true,
             allowNull: false,
         },
-        // user_id: {
-        //     type: DataTypes.UUIDV4,
-        //     references: {
-        //         model: 'usuarios',
-        //         key: 'id',
-        //     }
-        // },
-        name: {
-            type: DataTypes.STRING,
+        idCliente: {
+            type: DataTypes.UUIDV4,
             allowNull: false,
         },
-        celnum: {
-            type: DataTypes.STRING,
+        idProducto: {
+            type: DataTypes.UUIDV4,
             allowNull: false,
         },
-        direccion: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }
     },
     {
         sequelize: dbconnection,
