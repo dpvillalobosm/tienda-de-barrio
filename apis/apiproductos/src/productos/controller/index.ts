@@ -10,7 +10,7 @@ class ProductosController {
             const record = await ProductoInstance.create({ ...req.body, id });
             return res.json({ record, msg: "Producto agregado exitosamente" });
         } catch (e) {
-            return res.json({ msg: "error al crear", status: 500, route: "/create" });
+            return res.json({ msg: "Error al crear el producto", status: 500, route: "/create" });
         }
     }
 
@@ -21,7 +21,7 @@ class ProductosController {
             const records = await ProductoInstance.findAll({ where: {}, limit, offset });
             return res.json(records);
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/read" });
+            return res.json({ msg: "Error al consultar los productos", status: 500, route: "/read" });
         }
     }
 
@@ -31,7 +31,7 @@ class ProductosController {
             const record = await ProductoInstance.findOne({ where: { id } });
             return res.json(record);
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/read:id" });
+            return res.json({ msg: "Error al consultar el producto", status: 500, route: "/read:id" });
         }
     }
 
@@ -41,7 +41,7 @@ class ProductosController {
             const record = await ProductoInstance.findOne({ where: { id } });
     
             if (!record) {
-            return res.json({ msg: "Can not find existing record" });
+            return res.json({ msg: "No se encuentra el producto a actualizar" });
             }
     
             const updatedRecord = await record.update({
@@ -49,7 +49,7 @@ class ProductosController {
             });
             return res.json({ record: updatedRecord });
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/update/:id" });
+            return res.json({ msg: "Error al actualizar el producto", status: 500, route: "/update/:id" });
         } 
     }
 
@@ -59,13 +59,13 @@ class ProductosController {
             const record = await ProductoInstance.findOne({ where: { id } });
     
             if (!record) {
-            return res.json({ msg: "Can not find existing record" });
+            return res.json({ msg: "No se encuentra el producto a eliminar" });
             }
     
             const deletedRecord = await record.destroy();
             return res.json({ record: deletedRecord });
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/delete/:id" });
+            return res.json({ msg: "Error al eliminar el producto", status: 500, route: "/delete/:id" });
         }
     }
 }
