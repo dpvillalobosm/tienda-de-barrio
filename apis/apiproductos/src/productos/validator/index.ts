@@ -6,7 +6,7 @@ class ProductoValidator {
       body("id")
         .optional()
         .isUUID(4)
-        .withMessage("The value should be UUID v4"),
+        .withMessage("El valor debe ser un UUID v4"),
       body("titulo")
         .notEmpty()
         .withMessage("El título del producto no puede estar vacío"),
@@ -39,9 +39,9 @@ class ProductoValidator {
     return [
       param("id")
         .notEmpty()
-        .withMessage("The value should not be empty")
+        .withMessage("El valor no debe estar vacío")
         .isUUID(4)
-        .withMessage("The value should be UUID v4"),
+        .withMessage("El valor debe ser un UUID v4"),
     ];
   }
 }

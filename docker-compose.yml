@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  
+  apiclientes:
+    image: apiclientes
+    build:
+      context: apis/apiclientes
+      dockerfile: ./Dockerfile
+    ports:
+      - 9001:9001
+  
+  apiproductos:
+    image: apiproductos
+    build:
+      context: apis/apiproductos
+      dockerfile: ./Dockerfile
+    ports:
+      - 9002:9002
+  
+  apipedidos:
+    image: apipedidos
+    build:
+      context: apis/apipedidos
+      dockerfile: ./Dockerfile
+    ports:
+      - 9003:9003
+
+  apigateway:
+    image: apigateway
+    build:
+      context: apis/apigateway
+      dockerfile: ./Dockerfile
+    ports:
+      - 9004:9004

@@ -1,7 +1,7 @@
 import { body, query, param } from "express-validator";
 
 class GatewayValidator {
-  checkCreateGateway() {
+  checkCreatePedido() {
     return [
       body("id")
         .optional()

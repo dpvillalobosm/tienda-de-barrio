@@ -6,35 +6,35 @@ import GatewayController from "../controller/index"
 const gatewayrouter = express.Router();
 
 gatewayrouter.post(
-  "/create",
-  GatewayValidator.checkCreateGateway(),
+  "/crearPedido",
+  GatewayValidator.checkCreatePedido(),
   Middleware.handleValidationError,
   GatewayController.create
 );
 
 gatewayrouter.get(
-  "/read",
+  "/consultarPedido",
   GatewayValidator.checkReadGateway(),
   Middleware.handleValidationError,
   GatewayController.readAll
 );
 
 gatewayrouter.get(
-  "/read/:id",
+  "/consultarPedido/:id",
   GatewayValidator.checkIdParam(),
   Middleware.handleValidationError,
   GatewayController.readById
 );
 
 gatewayrouter.put(
-  "/update/:id",
+  "/modificarPedido/:id",
   GatewayValidator.checkIdParam(),
   Middleware.handleValidationError,
   GatewayController.update
 );
 
 gatewayrouter.delete(
-  "/delete/:id",
+  "/cancelarPedido/:id",
   GatewayValidator.checkIdParam(),
   Middleware.handleValidationError,
   GatewayController.delete

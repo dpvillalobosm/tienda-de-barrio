@@ -7,10 +7,6 @@ class ClienteValidator {
         .optional()
         .isUUID(4)
         .withMessage("The value should be UUID v4"),
-      // body("user_id")
-      //   .optional()
-      //   .isUUID(4)
-      //   .withMessage("The value should be UUID v4"),
       body("name")
         .notEmpty()
         .withMessage("El valor de nombre no puede estar vacio"),
