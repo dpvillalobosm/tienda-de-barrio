@@ -1,19 +1,13 @@
 import express  from "express";
-import dbconnection from "./config/database.config";
 import gatewayrouter from "./gateway/routes";
 
-
-dbconnection.sync().then(() => {
-  console.log("conectado a la base de datos");
-});
-
 const app = express();
-const port = 9001;
+const port = 9004;
 
 app.use(express.json());
 
-app.use('/gateway/api', gatewayrouter)
+app.use('/api/v1', gatewayrouter)
 
 app.listen(process.env.PORT || port, () => {
-  console.log("Server is running on port " + port);
+  console.log("El servidor está corriendo en el puerto: " + port);
 });

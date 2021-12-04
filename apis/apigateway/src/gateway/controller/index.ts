@@ -1,15 +1,14 @@
 import {Request, Response } from "express";
 import { v4 as uuidv4 } from "uuid";
-import { GatewayInstance } from "../model/index";
-
-
-
 
 class GatewayController {
 
     async create(req:Request, res:Response) {
         const id = uuidv4();
         try {
+            // TODO: Poner aquí la lógica para consultar el cliente y el producto
+            // Si existen, crear el registro.
+            // Si no, mostrar errores.
             const record = await GatewayInstance.create({ ...req.body, id });
             return res.json({ record, msg: "Gateway agregado exitosamente" });
         } catch (e) {

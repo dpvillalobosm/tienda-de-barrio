@@ -1,4 +1,4 @@
-import { DataTypes, Model } from 'Sequelize';
+import { DataTypes, Model } from 'sequelize';
 import dbconnection from '../../config/database.config';
 
 interface ClienteAttributes {

@@ -1,7 +1,7 @@
-import {Sequelize} from 'Sequelize';
+import {Sequelize} from 'sequelize';
 
 const dbconnection = new Sequelize('app', '', '', {
-    storage: "../../database.sqlite",
+    storage: "database.sqlite",
     dialect:"sqlite",
     logging: false, 
 })
