@@ -1,73 +1,44 @@
 import {Request, Response } from "express";
-import { v4 as uuidv4 } from "uuid";
 
 class GatewayController {
 
     async create(req:Request, res:Response) {
-        const id = uuidv4();
         try {
-            // TODO: Poner aquí la lógica para consultar el cliente y el producto
-            // Si existen, crear el registro.
-            // Si no, mostrar errores.
-            const record = await GatewayInstance.create({ ...req.body, id });
-            return res.json({ record, msg: "Gateway agregado exitosamente" });
+            return res.status(501).json({msg: "Disponible próximamente", status: 501 });
         } catch (e) {
-            return res.json({ msg: "error al crear", status: 500, route: "/create" });
+            return res.json({ msg: "Error Interno", status: 500, route: "/crearPedido" });
         }
     }
 
     async readAll(req:Request, res:Response){
         try {
-            const limit = req.query?.limit as number | undefined;
-            const offset = req.query?.offset as number | undefined;
-            const records = await GatewayInstance.findAll({ where: {}, limit, offset });
-            return res.json(records);
+            return res.status(501).json({msg: "Disponible próximamente", status: 501 });
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/read" });
+            return res.status(500).json({ msg: "Error Interno", status: 500, route: "/consultarPedidos" });
         }
     }
 
     async readById(req:Request, res:Response){
         try {
-            const { id } = req.params;
-            const record = await GatewayInstance.findOne({ where: { id } });
-            return res.json(record);
+            return res.status(501).json({msg: "Disponible próximamente", status: 501 });
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/read:id" });
+            return res.status(500).json({ msg: "Error Interno", status: 500, route: "/consultarPedido/:id" });
         }
     }
 
     async update(req:Request, res:Response){
         try {
-            const { id } = req.params;
-            const record = await GatewayInstance.findOne({ where: { id } });
-    
-            if (!record) {
-            return res.json({ msg: "Can not find existing record" });
-            }
-    
-            const updatedRecord = await record.update({
-                ...req.body,
-            });
-            return res.json({ record: updatedRecord });
+            return res.status(501).json({msg: "Disponible próximamente", status: 501 });
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/update/:id" });
+            return res.status(500).json({ msg: "Error Interno", status: 500, route: "/modificarPedido/:id" });
         } 
     }
 
     async delete(req:Request, res:Response){
         try {
-            const { id } = req.params;
-            const record = await GatewayInstance.findOne({ where: { id } });
-    
-            if (!record) {
-            return res.json({ msg: "Can not find existing record" });
-            }
-    
-            const deletedRecord = await record.destroy();
-            return res.json({ record: deletedRecord });
+            return res.status(501).json({msg: "Disponible próximamente", status: 501 });
         } catch (e) {
-            return res.json({ msg: "fail to read", status: 500, route: "/delete/:id" });
+            return res.status(500).json({ msg: "Error Interno", status: 500, route: "/cancelarPedido/:id" });
         }
     }
 }
