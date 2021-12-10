@@ -9,6 +9,8 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 9001:9001
+    volumes:
+      - dbPv:/usr/app/db:rw
   
   apiproductos:
     image: apiproductos
@@ -17,6 +19,8 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 9002:9002
+    volumes:
+      - dbPv:/usr/app/db:rw
   
   apipedidos:
     image: apipedidos
@@ -25,7 +29,9 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 9003:9003
-
+    volumes:
+      - dbPv:/usr/app/db:rw
+  
   apigateway:
     image: apigateway
     build:
@@ -33,3 +39,6 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 9004:9004
+
+volumes:
+  dbPv:

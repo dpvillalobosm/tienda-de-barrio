@@ -13,7 +13,7 @@ gatewayrouter.post(
 );
 
 gatewayrouter.get(
-  "/consultarPedido",
+  "/consultarPedidos",
   GatewayValidator.checkReadGateway(),
   Middleware.handleValidationError,
   GatewayController.readAll
