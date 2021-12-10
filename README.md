@@ -104,3 +104,21 @@ Diagramas de comportamiento y roles para el caso de uso de la tienda de barrio, 
 **Tienda por capas:**
 
 ![tpc](images/Tiendaporcapas.png)
+
+**Comportamiento de Aplicaciones:**
+![ca](images/ComportamientoAplicaciones.png)
+
+**Cooperación de Aplicaciones:**
+![capps](images/CooperacionAplicaciones.png)
+
+**Estructura de aplicación:**
+![ea](images/Estructuraaplicaciones.png)
+
+**Infraestructura:**
+![i](images/Infraestructura.png)
+
+**Uso de aplicación:**
+![ua](images/Usoaplicacion.png)
+
+**Uso de Infraestructura:**
+![ui](images/UsoInfraestrctura.png)
